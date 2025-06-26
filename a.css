@@ -1,0 +1,145 @@
+body{
+   background-image: linear-gradient(-280deg, #2CD8D5 0%, #C5C1FF 56%, #FFBAC3 100%);
+    font-size: 30px;
+
+}
+#toggle{
+    position: absolute;
+    display: flex;
+    background-color: black;
+    width: 50px;
+    height: 50px;
+    border: 2px;
+    border-radius: 600px;
+    cursor: pointer;
+}
+.calculator{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin:auto 50vh ;
+   background-image: linear-gradient(to top, #0c3483 0%, #a2b6df 100%, #6b8cce 100%, #a2b6df 100%);
+    border: 2px solid black;
+    border-radius: 20px;
+     box-shadow: 4px 4px 10px 5px rgba(0, 0, 0, 0.7);
+}
+#operators{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 10px;
+    padding: 30px;
+    border: 2px solid black;
+    margin: 30px;
+    background-color: lightgrey;
+     border-radius: 10px;
+    box-shadow: 4px 4px 10px 4px rgba(0, 0, 0, 0.5) ;
+}
+#operators button{
+    font-size: 28px;
+    font-weight: bold;
+    border-radius: 10px;
+   padding: 20px;
+    box-shadow: 4px 4px 10px 2px rgba(0, 0, 0, 0.7) ;
+    cursor: pointer;
+}
+#operators button:hover{
+    font-size: 28px;
+    font-weight: bold;
+    border-radius: 10px;
+    background-color:lightgreen;
+}
+#numbers{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 10px;
+    padding: 10px;
+    border: 2px solid black;
+    margin: 30px;
+     background-color: lightgrey;
+     border-radius: 10px;
+    box-shadow: 4px 4px 10px 4px rgba(0, 0, 0, 0.5) ;
+}
+#numbers button{
+    font-size: 28px;
+    font-weight: bold;
+     border-radius: 10px;
+   padding: 10px;
+    box-shadow: 4px 4px 10px 2px rgba(0, 0, 0, 0.7) ;
+    cursor: pointer;
+}
+#numbers button:hover{
+    background-color: darksalmon;
+}
+#perform{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 10px;
+    padding: 10px;
+    border: 2px solid black;
+    margin: 30px;
+     background-color: lightgrey;
+     border-radius: 10px;
+    box-shadow: 4px 4px 10px 4px rgba(0, 0, 0, 0.5) ;
+}
+#perform button{
+    font-size: 28px;
+    font-weight: bold;
+     border-radius: 10px;
+   padding: 10px;
+    box-shadow: 4px 4px 10px 2px rgba(0, 0, 0, 0.7) ;
+    cursor: pointer;
+
+}
+#perform button:hover{
+    background-color:crimson;
+}
+#displayResult{
+    width: 100%;
+    height: 40px;
+    font-size: 20px;
+    border: 3px solid none;
+    border-radius: 20px;
+    box-shadow:4px 4px 10px 4px rgba(0, 0, 0, 0.5) ;
+}
+#displayResult:hover{
+       transform: scale(1.05) translateY(2px);
+       transition: 0.5s;
+       border-color:red;
+}
+#operation{
+    display: flex;
+    width: 100%;
+    font-size: 20px;
+    background-color: antiquewhite;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 4px 4px 10px 2px rgba(0, 0, 0, 0.3);
+    border-radius: 10px;
+;
+}
+.lantern-container {
+    position: absolute;
+  display: flex;
+  justify-content: center;
+  gap: 150px;
+  position: absolute;
+  bottom: 0px;
+  width: 100%;
+  z-index: -1;
+}
+
+.lantern {
+    bottom: -200px;
+  position: relative;
+  animation: floatUp 6s ease-in-out infinite alternate;
+}
+
+/* Only show when dark mode is active */
+.dark-mode-only {
+  display: none;
+}
+body.dark .dark-mode-only {
+  display: flex;
+}
+

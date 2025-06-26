@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="a.css">
+</head>
+<body>
+    <div class="lantern-container dark-mode-only">
+        <div><img  class="lantern" src="images/Paper-Sky-Lantern-PNG-Image.png" width="200" height="200"></div>
+        <div><img  class="lantern" src="images/Paper-Sky-Lantern-PNG-Image.png" width="200" height="200"></div>
+        <div><img  class="lantern" src="images/Paper-Sky-Lantern-PNG-Image.png" width="200" height="200"></div>
+        <div><img  class="lantern" src="images/Paper-Sky-Lantern-PNG-Image.png" width="200" height="200"></div>
+    </div>
+    <div id="toggle" onclick="toggle()">🌜</div>
+    <div class="calculator">
+        <div id="heading"><h1>Calculator</h1></div>
+        <div id="menu">
+        <div id="operation">
+            <h2>Operation Menu</h2>
+        </div>
+        <div id="operators">
+            <button id="add" onclick="replace('add')">+</button>
+            <button id="subtract" onclick="replace('subtract')">-</button>
+            <button id="multiply" onclick="replace('multiply')">*</button>
+            <button id="divide" onclick="replace('divide')">/</button>
+            <button id="log" onclick="replace('log')">log x</button>
+            <button id="sqrt" onclick="replace('sqrt')">x<sup>1/2</sup></button>
+            <button id="square" onclick="replace('square')">x<sup>2</sup></button>
+            <button id="cube" onclick="replace('cube')">x<sup>3</sup></button>
+            <button id="cbrt" onclick="replace('cbrt')">x<sup>1/3</sup></button>
+        </div></div>
+        <div id="num_calc" style="display: none;">
+            <div id="input">
+                <input type="text" id="displayResult" autofocus placeholder="enter numbers separated by space..">
+            </div>
+            <div id="numbers">
+                <button id="btn" onclick="appendValue('1')">1</button>
+                 <button id="btn" onclick="appendValue('2')">2</button>
+                  <button id="btn" onclick="appendValue('3')">3</button>
+                   <button id="btn" onclick="appendValue('4')">4</button>
+                 <button id="btn" onclick="appendValue('5')">5</button>
+                  <button id="btn" onclick="appendValue('6')">6</button>
+                 <button id="btn" onclick="appendValue('7')">7</button>
+                  <button id="btn" onclick="appendValue('8')">8</button>
+                   <button id="btn" onclick="appendValue('9')">9</button>
+                    <button id="btn" onclick="appendValue('0')">0</button> 
+                       <button id="btn" onclick="appendValue(' ')">space</button>
+            </div>
+            <div id="perform">
+                <button id="clear" onclick="clearDisplay()">Clear All</button>
+                <button id="calculate" onclick="calculate()">Calculate</button>
+                <button id="back" onclick="back()">Back</button>
+            </div>
+        </div>
+
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+
+    <script src="a.js"></script>
+</body>
+</html>
