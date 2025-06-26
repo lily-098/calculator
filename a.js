@@ -1,4 +1,4 @@
-let selectedOperation = "";  // This is very important!
+let selectedOperation = "";  
 
 function replace(opId) {
     selectedOperation = opId;
@@ -65,31 +65,38 @@ function calculate() {
 
     document.getElementById('displayResult').value = result;
 }
+
 function toggle() {
   const toggleBtn = document.getElementById('toggle');
   const isDark = toggleBtn.textContent === '🌜';
+  const calc=document.getElementById('calculator');
 
   if (isDark) {
     document.body.classList.add('dark');
     document.body.style.background = "linear-gradient(135deg, #071952 10%, #088395 100%)";
+    calc.style.backgroundImage= "linear-gradient(to top, rgba(12, 52, 131, 0.7) 0%,rgba(162, 182, 223, 0.7) 100%, rgba(107, 140, 206, 0.7) 100%, rgba(162, 182, 223, 0.7) 100%)";
+   
     toggleBtn.textContent = '🌞';
-    animateLanterns();  // ← Run animation on dark mode
+    animateLanterns(); 
   } else {
     document.body.classList.remove('dark');
     document.body.style.background = "linear-gradient(-290deg, #2CD8D5 0%, #C5C1FF 56%, #FFBAC3 100%)";
     toggleBtn.textContent = '🌜';
-    gsap.killTweensOf(".lantern"); // ← Stop animation on light mode
+    gsap.killTweensOf(".lantern");
   }
 }
-
 function animateLanterns() {
-  gsap.utils.toArray(".lantern").forEach((lantern, index) => {
+  gsap.utils.toArray(".lantern").forEach(lantern => {
     gsap.to(lantern, {
       y: -900,
-      duration: 15 + index,
-      repeat: -1,
+      duration: () => gsap.utils.random(10, 20),
+      delay: () => gsap.utils.random(0, 5),
       ease: "sine.inOut",
-      delay: index * 1.5
+      repeat: -1,
+      repeatRefresh: true,
+      yoyo:true
+      
     });
   });
 }
+

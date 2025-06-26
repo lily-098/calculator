@@ -13,7 +13,7 @@ body{
     border-radius: 600px;
     cursor: pointer;
 }
-.calculator{
+#calculator{
     display: flex;
     flex-direction: column;
     justify-content: center;
